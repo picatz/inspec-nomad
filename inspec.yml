@@ -1,0 +1,8 @@
+name: inspec-nomad
+title: HashiCorp Nomad InSpec Resource Pack
+version: 0.1.0
+summary: Inspec libraries and controls for HashiCorp Nomad
+maintainer: Kent 'picat' Gruber
+copyright: Kent 'picat' Gruber
+copyright_email: kent.picat.gruber@gmail.com
+license: MIT

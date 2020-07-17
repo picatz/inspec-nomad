@@ -1,2 +1,3 @@
-# inspec-nomad
- An InSpec input source plugin for HashiCorp Nomad
+# HashiCorp Nomad - InSpec Profile
+
+Chef InSpec profile for HashiCorp Nomad
