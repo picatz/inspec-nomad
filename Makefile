@@ -20,3 +20,7 @@ help:
 .PHONY: inspec/repl
 inspec/repl: ## Starts an InSpec REPL with the Nomad library loaded
 	inspec shell --depends .
+
+.PHONY: inspec/exec
+inspec/exec: ## Runs InSpec test using local controls
+	inspec exec .
