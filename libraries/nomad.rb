@@ -14,9 +14,14 @@ class Nomad < Inspec.resource(1)
     end
   '
 
-  def initialize(addr: ENV['NOMAD_ADDR'], token: ENV['NOMAD_TOKEN'])
+  def initialize(addr: ENV['NOMAD_ADDR'], token: ENV['NOMAD_TOKEN'], tls_ca_cert_path: ENV['NOMAD_CACERT'], tls_client_cert_path: ENV['NOMAD_CLIENT_CERT'], tls_client_key_path: ENV['NOMAD_CLIENT_KEY'])
     @token = token
     @addr  = addr || 'http://127.0.0.1:4646'
+
+    # TODO(kent): implement mTLS support
+    @tls_ca_cert_path     = tls_ca_cert_path
+    @tls_client_cert_path = tls_client_cert_path
+    @tls_client_key_path  = tls_client_key_path
   end
 
   def members(**query_params)
